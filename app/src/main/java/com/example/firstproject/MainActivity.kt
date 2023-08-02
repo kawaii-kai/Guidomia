@@ -75,17 +75,17 @@ class MainActivity() : AppCompatActivity() {
             for (i in 0..jsonarr.length() - 1) {
                 var jsonobj = jsonarr.getJSONObject(i)
                 val cardatatitle = "${jsonobj.getString("make")} ${jsonobj.getString("model")}"
+                val rating = jsonobj.getInt("rating")
                 items.add(
                     CarData(
                         title = cardatatitle,
                         price = jsonobj.getDouble("customerPrice"),
                         pic = addPic(cardatatitle),
+                        rating = rating
                     )
                 )
 
             }
-
-
 
         }catch (e: IOException){
 
