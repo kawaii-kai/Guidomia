@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    app:cardBackgroundColor="@color/light_gray"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="12dp"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:id="@+id/materialCVCar"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:padding="10dp"-->
+        <!--                app:cardBackgroundColor="@color/light_gray"-->
+        <!--                app:cardCornerRadius="10dp"-->
+        <!--                app:cardElevation="8dp"-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent">-->
+
+        <ImageView
+            android:id="@+id/picIv"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/alpineroadster"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="3"
+            android:text="@string/alpine"
+            android:textColor="@color/dark_gray"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/picIv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="alpine roadster alpine roadster" />
+
+
+        <TextView
+            android:id="@+id/priceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/price120"
+            android:textColor="@color/dark_gray"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleTv"
+            app:layout_constraintStart_toStartOf="@id/titleTv"
+            app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/picIv"
+            app:layout_constraintTop_toBottomOf="@id/priceTv">
+
+
+            <RatingBar
+                android:id="@+id/carRating"
+                style="@android:attr/ratingBarStyleSmall"
+                android:layout_width="match_parent"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:numStars="5"
+                android:padding="0dp"
+                android:rating="5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

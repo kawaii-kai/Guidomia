@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FirstProject</string>
+    <string name="app_title">GUIDOMIA</string>
+    <string name="title">Tacoma 2021</string>
+    <string name="title2">Get yours now</string>
+    <string name="one">One</string>
+    <string name="filter">Filters</string>
+    <string name="alpine">Alpine roadster</string>
+    <string name="range">Range Rover</string>
+    <string name="bmw">BMW 33Oi</string>
+    <string name="mercedez">Mercedez benz</string>
+
+    <!--PRICES-->
+    <string name="price120">Price: 120K</string>
+    <string name="price65">Price: 65K</string>
+    <string name="price55">Price: 55K</string>
+    <string name="price54">Price: 54K</string>
+
+    <!--VECTORS-->
+    <string name="vector_menu">menu</string>
+
+    <!--IMAGE VIEWS-->
+    <string name="iv_tacoma">tacoma</string>
+
+
+
+</resources>
