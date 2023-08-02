@@ -19,6 +19,7 @@ class CarListAdapter(
         val title : TextView = binding.titleTv
         val price : TextView = binding.priceTv
         val pic: ImageView = binding.picIv
+        val  starRatingLinearLayout = binding.starRatingLayout
 
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderCarList {
@@ -35,15 +36,20 @@ class CarListAdapter(
        val car = list[position]
         //set data in items
 
-        with(holder.binding){
             holder.pic.setImageResource(car?.pic ?: R.drawable.alpineroadster)
             holder.title.text = (car.title)
             // TODO: Add function to format price can be here or in CarListAdapter
 
             holder.price.text = (car.price).toString()
 
-
+        createStarRating(car.rating, holder)
+    }
+    private fun createStarRating(rating: Int, holder: ViewHolderCarList){
+        for( i in 0 until rating){
+            val starImageView = LayoutInflater.from(holder.binding.root.context).inflate(R.layout.star_rating, null)
+            holder.starRatingLinearLayout.addView(starImageView, i)
         }
+
     }
 }
 

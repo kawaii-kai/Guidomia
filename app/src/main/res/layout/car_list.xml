@@ -74,32 +74,18 @@
             app:layout_constraintEnd_toEndOf="@id/titleTv"
             app:layout_constraintStart_toStartOf="@id/titleTv"
             app:layout_constraintTop_toBottomOf="@id/titleTv" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:id="@+id/starRatingLayout"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/picIv"
-            app:layout_constraintTop_toBottomOf="@id/priceTv">
+            app:layout_constraintTop_toBottomOf="@id/priceTv"
+            />
 
 
-            <RatingBar
-                android:id="@+id/carRating"
-                style="@android:attr/ratingBarStyleSmall"
-                android:layout_width="match_parent"
-                app:layout_constraintHorizontal_weight="1"
-                android:layout_height="wrap_content"
-                android:max="5"
-                android:numStars="5"
-                android:padding="0dp"
-                android:rating="5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
